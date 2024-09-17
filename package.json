@@ -2,9 +2,14 @@
   "name": "bundler-test-lottie",
   "version": "1.0.0",
   "description": "tsup lottie bundle test package",
+  "exports": {
+    ".": "./dist/index.d.ts"
+  },
   "main": "index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
   },
   "keywords": [],
   "author": "",

@@ -5,6 +5,6 @@ export default defineConfig({
   splitting: true,
   dts: true,
   format: ["cjs"],
-  clean: false,
+  clean: true,
   external: ["react", "react-dom"],
 });
