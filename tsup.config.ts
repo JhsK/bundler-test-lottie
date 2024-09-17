@@ -2,9 +2,22 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: ["src/index.ts"],
-  splitting: true,
+  splitting: false,
   dts: true,
   format: ["cjs"],
   clean: true,
-  external: ["react", "react-dom"],
+  sourcemap: true,
+  external: ["react", "react-dom", "prop-types"],
+  //   esbuildOptions(options, context) {
+  //     options.banner = {
+  //       js: `import * as requireReact from 'react';
+  //        import * as requireReactDom from 'react-dom';
+
+  //        function require(m) {
+  //          if (m === 'react') return requireReact;
+  //          if (m === 'react-dom') return requireReactDom;
+  //          throw new Error(\`Unknown module \${m}\`);
+  //        }`,
+  //     };
+  //   },
 });

@@ -1,3 +1,4 @@
+import Button from "./Button";
 import { SuccessLottie } from "./Lottie";
 
-export { SuccessLottie };
+export { SuccessLottie, Button };
